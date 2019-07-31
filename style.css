@@ -311,6 +311,10 @@ img::selection {
     font-weight: 500;
 }
 
+.fw-600 {
+    font-weight: 600;
+}
+
 .btn-larger {
     min-width: 156px;
     min-height: 46px;
@@ -432,38 +436,28 @@ img::selection {
     background-position: center top;
 }
 
-.footerSection__contact {
+
+.contact-container {
     margin-top: -450px;
-    z-index: 1;
-    position: relative;
-}
-
-.contact {
-    padding-bottom: 80px;
+    box-sizing: border-box;
     padding-top: 80px;
-    background-color: #fff;
+    padding-bottom: 80px;
+
 }
 
-.contact .container {
+.contact-wrapper {
+    border-radius: 20px;
     background-color: rgb(255, 255, 255);
     box-shadow: rgba(107, 83, 254, 0.1) 0px 0px 94px 6px;
-    border-radius: 20px;
-    /* padding: 80px 0px; */
 }
 
-.footer-extender img {
-    width: 100%;
-    height: auto;
-    display: block;
-    max-width: 100%;
-    margin: 0;
+.footer-extender {
+    margin-top: -210px;
 }
 
-.contact__form {
-    font-size: 16px;
+.contact-container__email-bg {
     font-weight: 500;
     color: rgb(52, 61, 72);
-    height: 84px;
     background: rgb(243, 242, 250);
     padding: 5px 15px;
     border-style: solid;
@@ -472,16 +466,27 @@ img::selection {
     border-radius: 10px;
 }
 
-
-.contact__email-input {
-    line-height: 4rem;
-    top: 50%;
-    position: absolute;
-    left: 10px;
-    transform: translateY(-50%);
-
+.contact-container__email-input {
+    background-color: transparent;
+    border: none;
+    outline: none;
+    display: block;
 }
 
+.contact-container__submit {
+    background-color: rgb(106, 82, 253);
+    border-radius: 6px;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    text-transform: uppercase;
+    font-size: 0.875rem;
+    font-style: normal;
+    font-weight: 500;
+    justify-content: center;
+    min-height: 46px;
+    min-width: 48px;
+}
 
 @media (min-width:1920px) {
     #testimonials {
@@ -504,6 +509,14 @@ img::selection {
         font-size: 2.5rem;
         font-weight: bold;
         line-height: 3.5rem;
+    }
+
+    .contact-container__submit {
+        position: absolute;
+        right: 27px;
+        height: 60px;
+        top: 12px;
+        line-height: 1rem;
     }
 }
 
