@@ -424,7 +424,11 @@ img::selection {
 }
 
 .betaSection {
-    padding: 30px 0px 400px;
+    padding: 30px 0px 40px;
+}
+
+.newsletter {
+    position: relative;
 }
 
 .footerSection {
@@ -434,6 +438,8 @@ img::selection {
     padding: 120px 0;
     background-repeat: no-repeat;
     background-position: center top;
+    padding-top: 210px;
+    margin-top: -200px;
 }
 
 
@@ -488,6 +494,13 @@ img::selection {
     min-width: 48px;
 }
 
+
+
+.page-map li a {
+    text-decoration: none;
+    font-size: 0.875rem;
+}
+
 @media (min-width:1920px) {
     #testimonials {
         margin-top: -200px;
@@ -525,9 +538,11 @@ img::selection {
         padding: 80px 0px 50px;
     }
 
-    .footerSection {
-        padding: 80px 0 60px;
+    .page-map {
+        padding-top: 80px;
     }
+
+
 }
 
 @media (max-width: 1200px) {
@@ -565,5 +580,19 @@ img::selection {
 
     #testimonials {
         margin-top: 50px;
+    }
+}
+
+@media (max-width: 340px) {
+    .container {
+        box-sizing: border-box;
+    }
+
+    #testimonials {
+        margin-top: 50px;
+    }
+
+    .download-wrapper img:last-of-type {
+        margin-top: 1rem;
     }
 }
