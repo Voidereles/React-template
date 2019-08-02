@@ -201,9 +201,18 @@ img::selection {
     width: 100%;
     height: 2px;
     float: right;
-    background-color: rgb(255, 255, 255);
+    background: #fff;
     margin: 4px 0px;
     transition: all 0.3s ease 0s;
+}
+
+.mobile-nav-toggle--scrolled {
+    top: 0.75rem;
+    z-index: 9999;
+}
+
+.mobile-nav-toggle--span {
+    background: rgb(42, 162, 117) !important;
 }
 
 .mobile-nav-toggle>span:nth-child(2) {

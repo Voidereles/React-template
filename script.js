@@ -3,18 +3,23 @@ $(window).scroll(function () {
         $('#header').addClass('header-scrolled');
         $('#header a').addClass('nav-link-dark');
         $('#headerImg').attr("src", "images/logo-bfece249803f3d440ef27a70c60f54f1.png");
+        $('.mobile-nav-toggle>span').addClass('mobile-nav-toggle--span');
+        $('.mobile-nav-toggle').addClass('mobile-nav-toggle--scrolled');
+
     } else {
         $('#header').removeClass('header-scrolled');
         $('#header a').removeClass('nav-link-dark');
         $('#headerImg').attr("src", "images/logo-white-512a641e90600644922a2327e20c5067.png");
+        $('.mobile-nav-toggle span').removeClass('mobile-nav-toggle--span');
+        $('.mobile-nav-toggle').removeClass('mobile-nav-toggle--scrolled');
     }
 });
 
-if ($(window).scrollTop() > 100) {
-    $('#header').addClass('header-scrolled');
-    $('#header a').addClass('nav-link-dark');
-    $('#headerImg').attr("src", "images/logo-bfece249803f3d440ef27a70c60f54f1.png");
-}
+// if ($(window).scrollTop() > 100) {
+//     $('#header').addClass('header-scrolled');
+//     $('#header a').addClass('nav-link-dark');
+//     $('#headerImg').attr("src", "images/logo-bfece249803f3d440ef27a70c60f54f1.png");
+// }
 
 if ($('.main-nav').length && $('.main-nav').attr('display') != 'none') {
     var $mobile_nav = $('.main-nav').clone().prop({
@@ -27,18 +32,21 @@ if ($('.main-nav').length && $('.main-nav').attr('display') != 'none') {
     $(document).on('click', '.mobile-nav-toggle', function (e) {
         $('body').toggleClass('mobile-nav-active');
         $('.mobile-nav-overly').toggle();
+        $('.mobile-nav-toggle>span').addClass('mobile-nav-toggle--span');
     });
 
     $(document).click(function (e) {
         var container = $(".mobile-nav, .mobile-nav-toggle");
         if (!container.is(e.target) && container.has(e.target).length === 0) {
             if ($('body').hasClass('mobile-nav-active')) {
+                $('.mobile-nav-toggle span').removeClass('mobile-nav-toggle--span');
                 $('body').removeClass('mobile-nav-active');
                 $('.mobile-nav-overly').hide();
             }
         }
     });
 } else if ($(".mobile-nav, .mobile-nav-toggle").length) {
+    $('.mobile-nav-toggle span').removeClass('mobile-nav-toggle--span');
     $(".mobile-nav, .mobile-nav-toggle").hide();
     $('.mobile-nav-overly').hide();
 }
